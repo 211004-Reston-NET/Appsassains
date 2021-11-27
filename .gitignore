@@ -1,0 +1,6 @@
+appsettings.json
+.vs
+.vscode
+bin
+obj
+publish
