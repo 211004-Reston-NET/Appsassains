@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SampleMvcApp.Support;
 using Auth0.AspNetCore.Authentication;
+using Auth0MVCApp.DatabaseContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace SampleMvcApp
 {
@@ -25,6 +27,9 @@ namespace SampleMvcApp
                 options.Domain = Configuration["Auth0:Domain"];
                 options.ClientId = Configuration["Auth0:ClientId"];
             });
+
+            services.AddDbContext<LmcTeamDatabaseContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("LmcDatabaseConnectionString")));
 
             services.AddControllersWithViews();
         }
