@@ -57,4 +57,4 @@ jobs:
         app-name: appsassians # Replace this with your web app name
         slot-name: 'Production'
         publish-profile: ${{secrets.SECRET_AZURE}} # Make sure you have a secret publish folder obtained from Azure
-        package: ./publish #This filepath might change depending on your repo
+        package: ./Auth0MVCApp/publish #This filepath might change depending on your repo
