@@ -26,6 +26,9 @@ namespace SampleMvcApp
                 options.ClientId = Configuration["Auth0:ClientId"];
             });
 
+            services.AddDbContext<LmcTeamDatabaseContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("LmcDatabaseConnectionString")));
+
             services.AddControllersWithViews();
         }
 
