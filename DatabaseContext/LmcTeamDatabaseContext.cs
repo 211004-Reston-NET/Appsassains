@@ -14,7 +14,7 @@ namespace Auth0MVCApp.DatabaseContext
 
         }
 
-        public DbSet<Image> Images { get; set; }
+        public DbSet<Picture> Picture { get; set; }
         public DbSet<User> User { get; set; }
 
 
