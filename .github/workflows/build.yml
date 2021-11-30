@@ -48,7 +48,7 @@ jobs:
     
     #Creates publish folder to be deployed to our webapp
     - name: Publish
-      run: dotnet publish / --configuration Release -o Publish
+      run: dotnet publish / --configuration Release -o publish
       
     #Deploying our app to azure web app
     - name: Deploy
@@ -57,4 +57,4 @@ jobs:
         app-name: appsassians # Replace this with your web app name
         slot-name: 'Production'
         publish-profile: ${{secrets.SECRET_AZURE}} # Make sure you have a secret publish folder obtained from Azure
-        package: Publish #This filepath might change depending on your repo
+        package: Apsassians/Auth0MVCApp.csproj.user #This filepath might change depending on your repo
