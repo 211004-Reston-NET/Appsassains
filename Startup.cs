@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SampleMvcApp.Support;
 using Auth0.AspNetCore.Authentication;
+using Auth0MVCApp.DatabaseContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace SampleMvcApp
 {
