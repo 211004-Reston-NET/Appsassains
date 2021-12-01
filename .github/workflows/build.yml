@@ -48,7 +48,7 @@ jobs:
     
     #Creates publish folder to be deployed to our webapp
     - name: Publish
-      run: dotnet publish Appsassains/ --configuration Release -o ./publish
+      run: dotnet publish ./ --configuration Release -o ./publish
       
     #Deploying our app to azure web app
     - name: Deploy
